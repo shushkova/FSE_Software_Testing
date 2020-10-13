@@ -712,18 +712,18 @@ def create_persons(min_j, max_j, min_i, max_i, n_persons):
         )
         for i in range(n_persons)
     ]
-
-    tmp = np.unique(inf)
-
-    for i in range(0, int(len(tmp) * 0.2)):
-        persons[tmp[i]].get_infected(SeasonalFluVirus(strength=1.0))
-
-    for i in range(int(len(tmp) * 0.2), int(len(tmp) * 0.6)):
-        persons[tmp[i]].get_infected(SARSCoV2(strength=1.0))
-
-    for i in range(int(len(tmp) * 0.6), len(tmp)):
-        persons[tmp[i]].get_infected(Cholera(strength=1.0))
-
+    """
+        tmp = np.unique(inf)
+    
+        for i in range(0, int(len(tmp) * 0.2)):
+            persons[tmp[i]].get_infected(SeasonalFluVirus(strength=1.0))
+    
+        for i in range(int(len(tmp) * 0.2), int(len(tmp) * 0.6)):
+            persons[tmp[i]].get_infected(SARSCoV2(strength=1.0))
+    
+        for i in range(int(len(tmp) * 0.6), len(tmp)):
+            persons[tmp[i]].get_infected(Cholera(strength=1.0))
+    """
     return persons
 
 
